@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joshua Twycross - Senior Full-Stack Engineer</title>
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Calibri', 'Arial', sans-serif;
+            font-size: 11pt;
+            line-height: 1.4;
+            color: #1a1a1a;
+            background: #ffffff;
+            max-width: 8.5in;
+            margin: 0 auto;
+            padding: 0.5in 0.6in;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                padding: 0.4in 0.5in;
+                max-width: 100%;
+            }
+            
+            .page-break {
+                page-break-before: always;
+            }
+            
+            a {
+                color: #1a1a1a;
+                text-decoration: none;
+            }
+        }
+
+        /* Header Section */
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #0f172a;
+        }
+
+        .name {
+            font-size: 24pt;
+            font-weight: bold;
+            color: #0f172a;
+            margin-bottom: 4px;
+            letter-spacing: 0.5px;
+        }
+
+        .title {
+            font-size: 13pt;
+            color: #334155;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .contact-info {
+            font-size: 10pt;
+            color: #475569;
+            line-height: 1.5;
+        }
+
+        .contact-info a {
+            color: #475569;
+            text-decoration: none;
+        }
+
+        /* Section Styles */
+        .section {
+            margin-bottom: 18px;
+        }
+
+        .section-title {
+            font-size: 12pt;
+            font-weight: bold;
+            color: #0f172a;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            padding-bottom: 4px;
+            border-bottom: 1.5px solid #cbd5e1;
+        }
+
+        /* Summary */
+        .summary {
+            text-align: justify;
+            line-height: 1.5;
+            margin-bottom: 8px;
+        }
+
+        .competencies {
+            font-weight: 600;
+            margin-top: 8px;
+            color: #1e293b;
+        }
+
+        /* Experience */
+        .job {
+            margin-bottom: 16px;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 4px;
+        }
+
+        .job-title {
+            font-size: 11pt;
+            font-weight: bold;
+            color: #1e293b;
+        }
+
+        .job-date {
+            font-size: 10pt;
+            color: #64748b;
+            white-space: nowrap;
+        }
+
+        .company {
+            font-size: 10.5pt;
+            color: #475569;
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+
+        .location {
+            font-size: 9.5pt;
+            color: #64748b;
+            font-style: italic;
+            margin-bottom: 6px;
+        }
+
+        /* Lists */
+        ul {
+            margin-left: 18px;
+            margin-top: 4px;
+        }
+
+        li {
+            margin-bottom: 4px;
+            line-height: 1.4;
+        }
+
+        /* Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px 20px;
+        }
+
+        .skill-category {
+            margin-bottom: 8px;
+        }
+
+        .skill-name {
+            font-weight: bold;
+            color: #1e293b;
+            margin-bottom: 3px;
+        }
+
+        .skill-items {
+            font-size: 10pt;
+            color: #475569;
+            line-height: 1.4;
+        }
+
+        /* Projects */
+        .project {
+            margin-bottom: 14px;
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 3px;
+        }
+
+        .project-title {
+            font-size: 11pt;
+            font-weight: bold;
+            color: #1e293b;
+        }
+
+        .project-date {
+            font-size: 9.5pt;
+            color: #64748b;
+        }
+
+        .project-tech {
+            font-size: 10pt;
+            color: #475569;
+            font-style: italic;
+            margin-bottom: 5px;
+        }
+
+        /* Education */
+        .education-item {
+            margin-bottom: 10px;
+        }
+
+        .degree {
+            font-weight: bold;
+            color: #1e293b;
+        }
+
+        .institution {
+            color: #475569;
+            font-size: 10pt;
+        }
+
+        /* References */
+        .references-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px 20px;
+        }
+
+        .reference-item {
+            font-size: 10pt;
+        }
+
+        .reference-name {
+            font-weight: bold;
+            color: #1e293b;
+        }
+
+        .reference-title {
+            color: #64748b;
+            font-size: 9.5pt;
+        }
+
+        /* Compact spacing for page fitting */
+        @media print {
+            .section {
+                margin-bottom: 14px;
+            }
+            
+            .job {
+                margin-bottom: 12px;
+            }
+            
+            li {
+                margin-bottom: 3px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <div class="name">JOSHUA TWYCROSS</div>
+        <div class="title">Senior Full-Stack Engineer</div>
+        <div class="contact-info">
+            Cape Town, South Africa<br>
+            <a href="mailto:joshuatwycross@gmail.com">joshuatwycross@gmail.com</a> • +27 61 439 1349 • 
+            <a href="https://za.linkedin.com/in/joshuatwycross">linkedin.com/in/joshuatwycross</a>
+        </div>
+    </div>
+
+    <!-- Professional Summary -->
+    <div class="section">
+        <div class="section-title">Professional Summary</div>
+        <div class="summary">
+            Results-driven Senior Full-Stack Engineer with 5+ years architecting and shipping scalable web applications from MVP to production. Specialized in TypeScript/React/Node.js ecosystems with proven ability to own full product lifecycles—from database schema design and API architecture through CI/CD and production monitoring. Track record of making high-impact architectural decisions in fast-paced environments, leveraging modern tooling and AI-assisted development to maximize velocity without sacrificing code quality.
+        </div>
+        <div class="competencies">
+            Core Competencies: System Architecture • API Design • Performance Optimization • DevOps & CI/CD • Technical Leadership • Startup Environments
+        </div>
+    </div>
+
+    <!-- Technical Skills -->
+    <div class="section">
+        <div class="section-title">Technical Skills</div>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <div class="skill-name">Languages & Frameworks</div>
+                <div class="skill-items">TypeScript, JavaScript (ES6+), React, Next.js, Node.js, Python, C#, PHP, SQL, GraphQL</div>
+            </div>
+            <div class="skill-category">
+                <div class="skill-name">Frontend Development</div>
+                <div class="skill-items">React 18+, Next.js 14 (App Router), React Context, TanStack Query, Tailwind CSS, React Native, Performance Optimization</div>
+            </div>
+            <div class="skill-category">
+                <div class="skill-name">Backend & APIs</div>
+                <div class="skill-items">Node.js, Express, Fastify, RESTful API Design, GraphQL, AWS Lambda, Authentication (JWT, OAuth), RBAC</div>
+            </div>
+            <div class="skill-category">
+                <div class="skill-name">Databases & Caching</div>
+                <div class="skill-items">PostgreSQL, Prisma ORM, Redis, PLSQL, Query Optimization, Schema Design, SSRS</div>
+            </div>
+            <div class="skill-category">
+                <div class="skill-name">Cloud & DevOps</div>
+                <div class="skill-items">AWS (Lambda, S3, RDS), Azure, Vercel, CI/CD (GitHub Actions), Docker, Infrastructure as Code, Monitoring (Sentry, Datadog)</div>
+            </div>
+            <div class="skill-category">
+                <div class="skill-name">System Architecture</div>
+                <div class="skill-items">Microservices, Message Queuing, Batch Processing, WebSockets, Event-Driven Architecture, Monorepo Management</div>
+            </div>
+            <div class="skill-category">
+                <div class="skill-name">CMS & E-commerce</div>
+                <div class="skill-items">Payload CMS, Shopify (Liquid), Headless CMS Architecture</div>
+            </div>
+            <div class="skill-category">
+                <div class="skill-name">Tools & Practices</div>
+                <div class="skill-items">Git, GitHub, Monorepo (Turborepo/Nx), AI-Assisted Development (Cursor), Agile/Scrum, Technical Documentation, Code Review</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Professional Experience -->
+    <div class="section">
+        <div class="section-title">Professional Experience</div>
+        
+        <div class="job">
+            <div class="job-header">
+                <div class="job-title">Senior Full-Stack Engineer</div>
+                <div class="job-date">Feb 2024 – Sept 2024</div>
+            </div>
+            <div class="company">Modern Day Strategy</div>
+            <div class="location">Cape Town, South Africa</div>
+            <ul>
+                <li>Architected and delivered 5 production websites (DeHoof Homes, Azantx, Tiiglu, Saafy, Sarcelle) using Next.js 14 with App Router, Payload CMS, and TypeScript—handling end-to-end delivery from client requirements through deployment and post-launch optimization</li>
+                <li>Designed headless CMS architecture with Payload enabling non-technical clients to manage content independently, reducing maintenance overhead by ~60% compared to previous WordPress implementations</li>
+                <li>Built custom Shopify storefronts with Liquid templating and integrated third-party APIs for payment processing, inventory sync, and analytics—ensuring PCI compliance and optimizing checkout conversion rates</li>
+                <li>Established CI/CD pipelines using Vercel and GitHub Actions with automated testing, reducing deployment time from 2 hours to 8 minutes and enabling same-day feature releases</li>
+                <li>Implemented performance optimizations (image optimization, code splitting, caching strategies) achieving Lighthouse scores of 95+ and sub-2s page loads</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <div class="job-title">Full-Stack Engineer</div>
+                <div class="job-date">Jan 2020 – Feb 2024</div>
+            </div>
+            <div class="company">PrixGig LLC / Modern Influence Society</div>
+            <div class="location">Remote</div>
+            <ul>
+                <li>Owned development of Influence Suite—a KPI analytics dashboard for influencer marketing campaigns serving 50+ active users, built with Next.js, Prisma ORM, PostgreSQL, and React Context for state management</li>
+                <li>Designed and implemented RESTful APIs with Node.js handling authentication, role-based access control (RBAC), and background job processing for data aggregation across multiple social platforms</li>
+                <li>Architected batch processing workflows using job queues to automate analytics reporting, reducing manual reporting time from 4 hours/week to fully automated daily summaries</li>
+                <li>Built serverless newsletter opt-in system with Vanilla JS frontend and AWS Lambda functions, handling 10K+ monthly signups with 99.9% uptime</li>
+                <li>Optimized database queries and implemented Redis caching layer, reducing API response times from 800ms to <150ms and improving dashboard load performance by 70%</li>
+                <li>Collaborated directly with founders to translate business requirements into technical solutions, prioritizing features based on user impact and technical feasibility</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <div class="job-title">Software Engineer</div>
+                <div class="job-date">Feb 2020 – Oct 2022</div>
+            </div>
+            <div class="company">Business Engineering (Pty) Ltd</div>
+            <div class="location">Cape Town, South Africa</div>
+            <ul>
+                <li>Maintained and enhanced JavaScript-based inventory management system serving 20+ warehouse locations, implementing Redis caching to reduce database load by 50% and improve query performance</li>
+                <li>Designed and built SQL Server Reporting Services (SSRS) dashboards for real-time inventory tracking and financial reporting, used daily by operations and finance teams</li>
+                <li>Architected batch processing workflows for nightly data synchronization between legacy systems and modern web applications, eliminating manual data entry and reducing errors by 80%</li>
+                <li>Optimized PLSQL stored procedures and database indexes, reducing report generation time from 10 minutes to under 30 seconds</li>
+                <li>Collaborated with cross-functional teams to gather requirements and deliver data-driven solutions aligned with business objectives</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <div class="job-title">DevOps & Infrastructure Consultant</div>
+                <div class="job-date">Nov 2022 – Apr 2023</div>
+            </div>
+            <div class="company">Cloud Align</div>
+            <div class="location">Cape Town, South Africa</div>
+            <ul>
+                <li>Implemented Microsoft Endpoint Management (Intune) for device provisioning and security policy enforcement across 100+ endpoints</li>
+                <li>Conducted security audits and established compliance protocols aligned with industry standards, reducing vulnerability exposure by 40%</li>
+                <li>Earned Microsoft 365 Certified: Fundamentals, demonstrating proficiency in enterprise cloud infrastructure</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Page Break for Print -->
+    <div class="page-break"></div>
+
+    <!-- Key Projects -->
+    <div class="section">
+        <div class="section-title">Key Projects</div>
+        
+        <div class="project">
+            <div class="project-header">
+                <div class="project-title">Influence Suite – KPI Analytics Platform</div>
+                <div class="project-date">Mar 2023 – Present</div>
+            </div>
+            <div class="project-tech">Tech Stack: Next.js 14, TypeScript, Prisma, PostgreSQL, Redis, TanStack Query</div>
+            <ul>
+                <li>Architected full-stack SaaS application supporting 50+ active users with multi-tenant architecture</li>
+                <li>Designed PostgreSQL schema with Prisma ORM optimizing for query performance and data integrity across user accounts, campaigns, and social media metrics</li>
+                <li>Built RESTful API layer with Node.js handling authentication, RBAC, and background job processing for data aggregation from Instagram, TikTok, and YouTube APIs</li>
+                <li>Implemented real-time dashboard updates using WebSockets and optimized frontend rendering with TanStack Query for efficient cache management</li>
+                <li>Established CI/CD pipeline with automated testing (Jest, Playwright) and deployment to Vercel, enabling daily feature releases with zero downtime</li>
+                <li>Instrumented application monitoring with Sentry for error tracking and custom analytics to measure feature adoption and performance bottlenecks</li>
+            </ul>
+        </div>
+
+        <div class="project">
+            <div class="project-header">
+                <div class="project-title">E-commerce & CMS Websites Portfolio</div>
+                <div class="project-date">Feb 2024 – Sept 2024</div>
+            </div>
+            <div class="project-tech">Tech Stack: Next.js, Shopify, Payload CMS, Vercel, Tailwind CSS</div>
+            <ul>
+                <li>DeHoof Homes – Real estate showcase with Payload CMS and performance optimization achieving Lighthouse score 95+</li>
+                <li>Azantx – E-commerce platform with inventory management and third-party API integrations</li>
+                <li>Tiiglu – Marketing website with sub-2s page loads through advanced caching strategies</li>
+                <li>Saafy – Custom Shopify store with payment gateway integration ensuring PCI compliance</li>
+                <li>Sarcelle – Headless CMS implementation enabling client self-management and reducing maintenance overhead by 60%</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Education -->
+    <div class="section">
+        <div class="section-title">Education & Certifications</div>
+        <div class="education-item">
+            <div class="degree">Diploma in IT Software Development</div>
+            <div class="institution">IIE's Varsity College, Cape Town</div>
+        </div>
+        <div class="education-item">
+            <div class="degree">Microsoft 365 Certified: Fundamentals</div>
+            <div class="institution">Microsoft | 2023</div>
+        </div>
+    </div>
+
+    <!-- Volunteer Experience -->
+    <div class="section">
+        <div class="section-title">Volunteer Experience</div>
+        <div class="job">
+            <div class="job-title">Concerts & Events Assistant / Youth Leader</div>
+            <div class="company">Community Events & Youth Programs</div>
+            <ul>
+                <li>Technical stage setup including audio, lighting, and microphone systems for community concerts and events</li>
+                <li>Mentoring and community engagement programs supporting local youth development initiatives</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- References -->
+    <div class="section">
+        <div class="section-title">References</div>
+        <div class="references-grid">
+            <div class="reference-item">
+                <div class="reference-name">Rudi Killian</div>
+                <div class="reference-title">Senior Lecturer, Software Development</div>
+            </div>
+            <div class="reference-item">
+                <div class="reference-name">Marcel Du Ry</div>
+                <div class="reference-title">CEO, Modern Day Strategy</div>
+            </div>
+            <div class="reference-item">
+                <div class="reference-name">Allen Yaxley</div>
+                <div class="reference-title">Business Engineering</div>
+            </div>
+            <div class="reference-item">
+                <div class="reference-name">Brunhilde Giles</div>
+                <div class="reference-title">Manager</div>
+            </div>
+        </div>
+        <div style="margin-top: 8px; font-size: 9.5pt; color: #64748b; font-style: italic;">
+            Full contact details available upon request
+        </div>
+    </div>
+</body>
+</html>
