@@ -207,6 +207,39 @@ section h2 {
   margin-bottom: 0.25rem;
 }
 
+.project h3 a {
+  color: #0066cc;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.project h3 a:hover {
+  color: #004499;
+  text-decoration: underline;
+}
+
+/* Live Demos - Condensed */
+.live-demos {
+  margin-bottom: 1rem;
+}
+
+.demo-links {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #000000;
+}
+
+.demo-links a {
+  color: #0066cc;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.demo-links a:hover {
+  color: #004499;
+  text-decoration: underline;
+}
+
 .project-meta {
   color: #333333;
   font-size: 0.85rem;
@@ -224,6 +257,17 @@ section h2 {
   color: #000000;
   line-height: 1.5;
   font-size: 0.9rem;
+}
+
+.project li a {
+  color: #0066cc;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.project li a:hover {
+  color: #004499;
+  text-decoration: underline;
 }
 
 /* Education */
@@ -477,6 +521,11 @@ section h2 {
     margin-bottom: 0.05rem !important;
   }
 
+  .project h3 a {
+    color: #0066cc !important;
+    text-decoration: underline !important;
+  }
+
   .project-meta {
     font-size: 7pt !important;
     margin-bottom: 0.08rem !important;
@@ -491,6 +540,27 @@ section h2 {
     margin-bottom: 0.08rem !important;
     font-size: 7pt !important;
     line-height: 1.2 !important;
+  }
+
+  .project li a {
+    color: #0066cc !important;
+    text-decoration: underline !important;
+  }
+
+  /* Live Demos - Compact for Print */
+  .live-demos {
+    margin-bottom: 0.2rem !important;
+  }
+
+  .demo-links {
+    font-size: 7pt !important;
+    line-height: 1.2 !important;
+    margin-bottom: 0 !important;
+  }
+
+  .demo-links a {
+    color: #0066cc !important;
+    text-decoration: underline !important;
   }
 
   /* Education - Compact */

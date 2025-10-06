@@ -208,9 +208,17 @@ function App() {
                 <h3>E-commerce Portfolio (5 Production Sites)</h3>
                 <p className="project-meta">Feb 2024 - Sept 2024 | Next.js, Shopify, Payload CMS</p>
                 <ul>
-                  <li>DeHoof Homes, Azantx, Tiiglu, Saafy, Sarcelle - CMS and e-commerce integrations with Lighthouse 95+ scores, sub-2s loads</li>
+                  <li><a href="https://dehoof-homes.co.za/" target="_blank" rel="noopener noreferrer">DeHoof Homes</a>, <a href="https://www.azantx.com/" target="_blank" rel="noopener noreferrer">Azantx</a>, <a href="https://tiiglu.com/" target="_blank" rel="noopener noreferrer">Tiiglu</a>, <a href="https://saafy-app.vercel.app/" target="_blank" rel="noopener noreferrer">Saafy</a>, <a href="https://mysarcelle.com/" target="_blank" rel="noopener noreferrer">Sarcelle</a> - CMS and e-commerce integrations with Lighthouse 95+ scores, sub-2s loads</li>
                 </ul>
               </div>
+            </section>
+
+            {/* Live Demos */}
+            <section className="live-demos">
+              <h2>Live Demos</h2>
+              <p className="demo-links">
+                <a href="https://fanciful-nasturtium-09fcc3.netlify.app/" target="_blank" rel="noopener noreferrer">State Management with React Context</a> • <a href="https://glittery-pixie-cf64da.netlify.app/" target="_blank" rel="noopener noreferrer">Next.js App with Advanced Caching</a> • <a href="https://stirring-hamster-021507.netlify.app/" target="_blank" rel="noopener noreferrer">Inventory Management App</a>
+              </p>
             </section>
           </main>
         </div>
