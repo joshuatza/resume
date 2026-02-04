@@ -185,6 +185,24 @@ function App() {
               <div className="job">
                 <div className="job-header">
                   <div>
+                    <h3>Full-Stack Developer</h3>
+                    <p className="company">Orion Labs</p>
+                  </div>
+                  <div className="job-meta">
+                    <p className="period">Nov 2025 - Present</p>
+                    <p className="location">Cape Town, SA</p>
+                  </div>
+                </div>
+                <ul className="achievements">
+                  <li>Develop full-stack web applications using Next.js, TypeScript, and Tailwind CSS with Payload CMS for content management</li>
+                  <li>Design and implement PostgreSQL database schemas and Node.js backend services for client projects</li>
+                  <li>Conduct business analysis to translate client requirements into technical specifications and deliver end-to-end solutions</li>
+                </ul>
+              </div>
+
+              <div className="job">
+                <div className="job-header">
+                  <div>
                     <h3>Senior Full-Stack Engineer</h3>
                     <p className="company">Modern Day Strategy</p>
                   </div>
