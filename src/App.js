@@ -108,7 +108,7 @@ function App() {
               </div>
               <div className="skill-item">
                 <h4>Frontend</h4>
-                <p>React 18+, Next.js 14, TanStack Query, Tailwind CSS, React Native</p>
+                <p>React 18+, Next.js, TanStack Query, Tailwind CSS, React Native</p>
               </div>
               <div className="skill-item">
                 <h4>Backend</h4>
@@ -185,18 +185,19 @@ function App() {
               <div className="job">
                 <div className="job-header">
                   <div>
-                    <h3>Full-Stack Developer</h3>
+                    <h3>Full-Stack Engineer & Business Analyst (Contract)</h3>
                     <p className="company">Orion Labs</p>
                   </div>
                   <div className="job-meta">
-                    <p className="period">Nov 2025 - Present</p>
+                    <p className="period">Oct 2025 - Present</p>
                     <p className="location">Cape Town, SA</p>
                   </div>
                 </div>
                 <ul className="achievements">
-                  <li>Develop full-stack web applications using Next.js, TypeScript, and Tailwind CSS with Payload CMS for content management</li>
-                  <li>Design and implement PostgreSQL database schemas and Node.js backend services for client projects</li>
-                  <li>Conduct business analysis to translate client requirements into technical specifications and deliver end-to-end solutions</li>
+                  <li>Developing full-stack applications using Node.js, TypeScript, and Next.js for robust backend and frontend solutions</li>
+                  <li>Designing and managing PostgreSQL databases with Prisma ORM for efficient data management</li>
+                  <li>Implementing responsive UI with Tailwind CSS ensuring optimal user experience across devices</li>
+                  <li>Collaborating on business requirements and technical specifications as Business Analyst, bridging stakeholder needs with engineering solutions</li>
                 </ul>
               </div>
 
@@ -212,7 +213,7 @@ function App() {
                   </div>
                 </div>
                 <ul className="achievements">
-                  <li>Delivered 5 production websites using Next.js 14, Payload CMS, and TypeScript with end-to-end ownership from requirements to deployment</li>
+                  <li>Delivered 5 production websites using Next.js, Payload CMS, and TypeScript with end-to-end ownership from requirements to deployment</li>
                   <li>Designed headless CMS architecture reducing maintenance overhead by 60% vs WordPress</li>
                   <li>Established CI/CD pipelines (Vercel, GitHub Actions) reducing deployment from 2hrs to 8min, achieving Lighthouse scores 95+ and sub-2s page loads</li>
                 </ul>
