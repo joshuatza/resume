@@ -108,7 +108,7 @@ function App() {
               </div>
               <div className="skill-item">
                 <h4>Frontend</h4>
-                <p>React 18+, Next.js, TanStack Query, Tailwind CSS, React Native</p>
+                <p>React 18+, Next.js (App Router), TanStack Query, Tailwind CSS, React Native</p>
               </div>
               <div className="skill-item">
                 <h4>Backend</h4>
@@ -116,7 +116,7 @@ function App() {
               </div>
               <div className="skill-item">
                 <h4>Databases</h4>
-                <p>PostgreSQL, Prisma ORM, Redis, SSRS</p>
+                <p>PostgreSQL, Prisma ORM, Redis, SSRS, PL/SQL</p>
               </div>
               <div className="skill-item">
                 <h4>Cloud/DevOps</h4>
@@ -124,7 +124,7 @@ function App() {
               </div>
               <div className="skill-item">
                 <h4>Architecture</h4>
-                <p>Microservices, Message Queuing, WebSockets, Event-Driven</p>
+                <p>Microservices, Monorepos (Nx/Turbo), WebSockets, Event-Driven</p>
               </div>
               <div className="skill-item">
                 <h4>CMS/E-commerce</h4>
@@ -167,8 +167,8 @@ function App() {
             <section className="summary">
               <h2>Professional Summary</h2>
               <p>
-                Senior Full-Stack Engineer with 5+ years building scalable TypeScript/React/Node.js applications.
-                Proven track record architecting systems from database design through CI/CD and production monitoring.
+                Senior Full-Stack Engineer with 6+ years architecting and delivering scalable TypeScript/React/Node.js applications from the ground up.
+                Proven track record designing systems end-to-end — from database schema through CI/CD pipelines to production monitoring.
                 Specialized in high-impact technical decisions, AI-assisted development, and shipping fast without
                 sacrificing quality.
               </p>
@@ -189,15 +189,14 @@ function App() {
                     <p className="company">Orion Labs</p>
                   </div>
                   <div className="job-meta">
-                    <p className="period">Oct 2025 - Present</p>
+                    <p className="period">Oct 2025 - Mar 2026</p>
                     <p className="location">Cape Town, SA</p>
                   </div>
                 </div>
                 <ul className="achievements">
-                  <li>Developing full-stack applications using Node.js, TypeScript, and Next.js for robust backend and frontend solutions</li>
-                  <li>Designing and managing PostgreSQL databases with Prisma ORM for efficient data management</li>
-                  <li>Implementing responsive UI with Tailwind CSS ensuring optimal user experience across devices</li>
-                  <li>Collaborating on business requirements and technical specifications as Business Analyst, bridging stakeholder needs with engineering solutions</li>
+                  <li>Architected full-stack applications using Node.js, TypeScript, and Next.js, delivering robust backend APIs and responsive frontend interfaces</li>
+                  <li>Engineered PostgreSQL database schemas with Prisma ORM, optimizing query performance and ensuring scalable data management</li>
+                  <li>Automated business reporting workflows and translated stakeholder requirements into technical specifications, bridging the gap between business strategy and engineering delivery</li>
                 </ul>
               </div>
 
