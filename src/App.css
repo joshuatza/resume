@@ -723,25 +723,3 @@ section h2 {
     justify-content: center;
   }
 }
-
-/* Anti-scraping styles */
-.honeypot {
-  position: absolute !important;
-  left: -9999px !important;
-  opacity: 0 !important;
-  pointer-events: none !important;
-  display: none !important;
-}
-
-/* Hide content from scrapers with DevTools open */
-body.devtools-open .resume {
-  opacity: 0.1;
-  filter: blur(10px);
-}
-
-/* Prevent automated screenshot tools */
-@media print {
-  .honeypot {
-    display: none !important;
-  }
-}

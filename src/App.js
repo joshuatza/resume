@@ -1,61 +1,11 @@
 import './App.css';
-import { useEffect, useState } from 'react';
 
 function App() {
-  const [isHuman, setIsHuman] = useState(false);
-
-  useEffect(() => {
-    // Anti-scraping: Detect human interaction
-    const handleInteraction = () => setIsHuman(true);
-
-    // Set timeout to show content after brief delay (bots often don't wait)
-    const timer = setTimeout(() => setIsHuman(true), 1000);
-
-    // Listen for human interactions
-    window.addEventListener('mousemove', handleInteraction, { once: true });
-    window.addEventListener('touchstart', handleInteraction, { once: true });
-    window.addEventListener('scroll', handleInteraction, { once: true });
-
-    // DevTools detection
-    const detectDevTools = () => {
-      const threshold = 160;
-      if (window.outerWidth - window.innerWidth > threshold ||
-          window.outerHeight - window.innerHeight > threshold) {
-        document.body.classList.add('devtools-open');
-      }
-    };
-
-    detectDevTools();
-    window.addEventListener('resize', detectDevTools);
-
-    return () => {
-      clearTimeout(timer);
-      window.removeEventListener('mousemove', handleInteraction);
-      window.removeEventListener('touchstart', handleInteraction);
-      window.removeEventListener('scroll', handleInteraction);
-      window.removeEventListener('resize', detectDevTools);
-    };
-  }, []);
-
-  const handleDownloadPDF = async () => {
-    const element = document.getElementById('resume-content');
-    const html2pdf = (await import('html2pdf.js')).default;
-
-    const opt = {
-      margin: [0.3, 0.4, 0.3, 0.4],
-      filename: 'Joshua_Twycross_Senior_FullStack_Engineer.pdf',
-      image: { type: 'jpeg', quality: 0.98 },
-      html2canvas: { scale: 2, useCORS: true, letterRendering: true },
-      jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait', compress: true },
-      pagebreak: { mode: 'css', before: '.references' }
-    };
-
-    html2pdf().set(opt).from(element).save();
-  };
-
-  const preventCopy = (e) => {
-    e.preventDefault();
-    return false;
+  const handleDownloadPDF = () => {
+    const originalTitle = document.title;
+    document.title = 'Joshua_Twycross_Senior_FullStack_Engineer';
+    window.print();
+    document.title = originalTitle;
   };
 
   return (
@@ -71,13 +21,7 @@ function App() {
         </button>
       </div>
 
-      <div
-        className="resume"
-        id="resume-content"
-        onCopy={preventCopy}
-        onCut={preventCopy}
-        onPaste={preventCopy}
-      >
+      <div className="resume" id="resume-content">
         {/* Header */}
         <header className="header">
           <h1>Joshua Twycross</h1>
@@ -92,6 +36,10 @@ function App() {
             <a href="https://linkedin.com/in/joshuatwycross" target="_blank" rel="noopener noreferrer">
               LinkedIn
             </a>
+            <span className="separator">•</span>
+            <a href="https://github.com/joshuatza" target="_blank" rel="noopener noreferrer">
+              GitHub
+            </a>
           </div>
         </header>
 
@@ -104,7 +52,7 @@ function App() {
               <h2>Skills</h2>
               <div className="skill-item">
                 <h4>Languages</h4>
-                <p>TypeScript, JavaScript, Python, C#, PHP, SQL</p>
+                <p>TypeScript, JavaScript, Python, SQL</p>
               </div>
               <div className="skill-item">
                 <h4>Frontend</h4>
@@ -132,7 +80,7 @@ function App() {
               </div>
               <div className="skill-item">
                 <h4>Tools</h4>
-                <p>Git, GitHub, Monorepo, Cursor AI, Agile</p>
+                <p>Git, GitHub, Cursor AI, Agile</p>
               </div>
             </section>
 
@@ -157,7 +105,7 @@ function App() {
             {/* References */}
             <section className="references">
               <h2>References</h2>
-              <p className="references-note">Available upon request: Rudi Killian (Senior Lecturer), Marcel Du Ry (CEO, Modern Day Strategy), Allen Yaxley (Business Engineering), Brunhilde Giles (Manager)</p>
+              <p className="references-note">Available upon request.</p>
             </section>
           </aside>
 
@@ -287,33 +235,7 @@ function App() {
             </section>
           </main>
         </div>
-
-        {/* Honeypot elements - hidden from humans, bots might interact */}
-        <div className="honeypot" style={{ position: 'absolute', left: '-9999px', opacity: 0 }}>
-          <input type="text" name="website" tabIndex="-1" autoComplete="off" />
-          <input type="email" name="email_confirm" tabIndex="-1" autoComplete="off" />
-          <a href="/admin">Admin Panel</a>
-          <a href="/api/data">API Data</a>
-        </div>
       </div>
-
-      {/* Loading overlay for bots without JS */}
-      {!isHuman && (
-        <div style={{
-          position: 'fixed',
-          top: 0,
-          left: 0,
-          width: '100%',
-          height: '100%',
-          background: 'white',
-          zIndex: 9999,
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center'
-        }}>
-          <p>Loading...</p>
-        </div>
-      )}
     </div>
   );
 }

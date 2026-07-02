@@ -19,7 +19,7 @@ npm run build      # Build production bundle to /build
 
 ### Application Structure
 - **Single Component App**: The entire resume is rendered in `src/App.js` as a single component with inline JSX structure
-- **PDF Export**: Uses `html2pdf.js` library to convert the rendered resume DOM to PDF on-demand
+- **PDF Export**: The Download button calls `window.print()` (with a temporary `document.title` for the filename), relying on the print CSS to produce a text-based, ATS-parseable PDF
 - **Print Optimization**: Extensive print-specific CSS in `src/App.css` (lines 324-559) with two-column layout preservation
 
 ### Key Files
@@ -35,7 +35,7 @@ The CSS uses a two-column grid layout (`.resume-content` with `grid-template-col
 Print styles heavily optimize spacing and font sizes for PDF output while maintaining the two-column layout.
 
 ### PDF Export Implementation
-The `handleDownloadPDF` function (App.js:4-16) dynamically imports html2pdf.js and converts the `#resume-content` element to PDF with specific A4 formatting and margins (0.3in/0.4in).
+The `handleDownloadPDF` function in App.js sets `document.title` to the desired filename, calls `window.print()`, then restores the title. The `@media print` rules in App.css control the PDF output, so the resulting PDF keeps a real text layer (important for ATS parsing).
 
 ## Important Patterns
 
