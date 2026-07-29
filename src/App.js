@@ -25,7 +25,7 @@ function App() {
         {/* Header */}
         <header className="header">
           <h1>Joshua Twycross</h1>
-          <p className="headline">Platform Lead &amp; Senior Full-Stack Engineer</p>
+          <p className="headline">Platform Lead &amp; Full-Stack Engineer</p>
           <div className="contact">
             <a href="mailto:joshuatwycross@gmail.com">joshuatwycross@gmail.com</a>
             <span className="separator">•</span>
@@ -105,7 +105,7 @@ function App() {
             <section className="summary">
               <h2>Professional Summary</h2>
               <p>
-                Senior Full-Stack Engineer with 6+ years architecting and delivering scalable TypeScript/React/Node.js applications from the ground up.
+                Platform Lead and Full-Stack Engineer with 6+ years architecting and delivering scalable TypeScript/React/Node.js applications from the ground up.
                 Proven track record designing systems end-to-end — from database schema through CI/CD pipelines to production monitoring.
                 Specialized in high-impact technical decisions, AI-assisted development, and shipping fast without
                 sacrificing quality.
