@@ -3,7 +3,7 @@ import './App.css';
 function App() {
   const handleDownloadPDF = () => {
     const originalTitle = document.title;
-    document.title = 'Joshua_Twycross_Senior_FullStack_Engineer';
+    document.title = 'Joshua_Twycross_Platform_Lead_FullStack_Engineer';
     window.print();
     document.title = originalTitle;
   };
@@ -25,7 +25,7 @@ function App() {
         {/* Header */}
         <header className="header">
           <h1>Joshua Twycross</h1>
-          <p className="headline">Senior Full-Stack Engineer</p>
+          <p className="headline">Platform Lead &amp; Senior Full-Stack Engineer</p>
           <div className="contact">
             <a href="mailto:joshuatwycross@gmail.com">joshuatwycross@gmail.com</a>
             <span className="separator">•</span>
@@ -60,7 +60,7 @@ function App() {
               </div>
               <div className="skill-item">
                 <h4>Backend</h4>
-                <p>Node.js, Express, Fastify, REST/GraphQL APIs, AWS Lambda</p>
+                <p>Node.js, Express, Fastify, Python (FastAPI), REST/GraphQL APIs, AWS Lambda</p>
               </div>
               <div className="skill-item">
                 <h4>Databases</h4>
@@ -79,8 +79,12 @@ function App() {
                 <p>Payload CMS, Shopify, Headless CMS</p>
               </div>
               <div className="skill-item">
-                <h4>Tools</h4>
-                <p>Git, GitHub, Cursor AI, Agile</p>
+                <h4>Testing</h4>
+                <p>Jest, React Testing Library</p>
+              </div>
+              <div className="skill-item">
+                <h4>Tools & Practices</h4>
+                <p>Git, GitHub, Cursor AI, Agile/Scrum</p>
               </div>
             </section>
 
@@ -93,20 +97,6 @@ function App() {
               </div>
             </section>
 
-            {/* Certifications */}
-            <section className="certifications">
-              <h2>Certifications</h2>
-              <div className="cert-item">
-                <h4>Microsoft 365 Certified: Fundamentals</h4>
-                <p>Microsoft, 2023</p>
-              </div>
-            </section>
-
-            {/* References */}
-            <section className="references">
-              <h2>References</h2>
-              <p className="references-note">Available upon request.</p>
-            </section>
           </aside>
 
           {/* Main Content */}
@@ -133,11 +123,29 @@ function App() {
               <div className="job">
                 <div className="job-header">
                   <div>
+                    <h3>Platform Lead (Contract)</h3>
+                    <p className="company">Aye Eye Global Watch</p>
+                  </div>
+                  <div className="job-meta">
+                    <p className="period">Feb 2026 - Present</p>
+                    <p className="location">Remote</p>
+                  </div>
+                </div>
+                <ul className="achievements">
+                  <li>Own platform architecture and backend development, defining the platform data pipeline and API contracts consumed by the OS, frontend, and product engineering workstreams</li>
+                  <li>Designing and building the revenue and entitlement platform, including the ad booking system and Xero finance data integration</li>
+                  <li>Built the device registry and onboarding flow; coordinate delivery across a distributed team in a weekly sprint cadence, reporting directly to the founder</li>
+                </ul>
+              </div>
+
+              <div className="job">
+                <div className="job-header">
+                  <div>
                     <h3>Full-Stack Engineer & Business Analyst (Contract)</h3>
                     <p className="company">Orion Labs</p>
                   </div>
                   <div className="job-meta">
-                    <p className="period">Oct 2025 - Mar 2026</p>
+                    <p className="period">Nov 2025 - Mar 2026</p>
                     <p className="location">Cape Town, SA</p>
                   </div>
                 </div>
@@ -155,7 +163,7 @@ function App() {
                     <p className="company">Modern Day Strategy</p>
                   </div>
                   <div className="job-meta">
-                    <p className="period">Feb 2024 - Sept 2024</p>
+                    <p className="period">Feb 2025 - Sept 2025</p>
                     <p className="location">Cape Town, SA</p>
                   </div>
                 </div>
@@ -169,11 +177,11 @@ function App() {
               <div className="job">
                 <div className="job-header">
                   <div>
-                    <h3>Full-Stack Engineer</h3>
+                    <h3>Full-Stack Engineer (Contract)</h3>
                     <p className="company">PRIXGIG / Modern Influence Society</p>
                   </div>
                   <div className="job-meta">
-                    <p className="period">Jan 2020 - Feb 2024</p>
+                    <p className="period">Sep 2023 - Feb 2025</p>
                     <p className="location">Remote</p>
                   </div>
                 </div>
@@ -182,6 +190,22 @@ function App() {
                   <li>Built RESTful APIs with Node.js handling authentication, RBAC, and background job processing for social platform data aggregation</li>
                   <li>Developed serverless newsletter system (AWS Lambda) handling 10K+ monthly signups at 99.9% uptime</li>
                   <li>Optimized queries and implemented Redis caching reducing API response times 800ms → &lt;150ms (70% improvement)</li>
+                </ul>
+              </div>
+
+              <div className="job">
+                <div className="job-header">
+                  <div>
+                    <h3>Support Engineer</h3>
+                    <p className="company">Cloud Align</p>
+                  </div>
+                  <div className="job-meta">
+                    <p className="period">Nov 2022 - Apr 2023</p>
+                    <p className="location">Cape Town, SA</p>
+                  </div>
+                </div>
+                <ul className="achievements">
+                  <li>Diagnosed and resolved technical issues for client systems, troubleshooting across application, database, and infrastructure layers</li>
                 </ul>
               </div>
 
@@ -210,16 +234,16 @@ function App() {
 
               <div className="project">
                 <h3>Influence Suite – Analytics Platform</h3>
-                <p className="project-meta">Mar 2023 - Present | Next.js, TypeScript, Prisma, PostgreSQL, Redis</p>
+                <p className="project-meta">Mar 2023 - Feb 2024 | Next.js, TypeScript, Prisma, PostgreSQL, Redis</p>
                 <ul>
                   <li>Full-stack SaaS with multi-tenant architecture supporting 50+ users, RESTful API with authentication, RBAC, and background job processing</li>
-                  <li>Real-time dashboard with WebSockets, CI/CD pipeline with automated testing, Sentry monitoring</li>
+                  <li>Real-time dashboard with WebSockets, CI/CD pipeline with automated Jest testing, Sentry monitoring</li>
                 </ul>
               </div>
 
               <div className="project">
                 <h3>E-commerce Portfolio (5 Production Sites)</h3>
-                <p className="project-meta">Feb 2024 - Sept 2024 | Next.js, Shopify, Payload CMS</p>
+                <p className="project-meta">Feb 2025 - Sept 2025 | Next.js, Shopify, Payload CMS</p>
                 <ul>
                   <li><a href="https://dehoof-homes.co.za/" target="_blank" rel="noopener noreferrer">DeHoof Homes</a>, <a href="https://www.azantx.com/" target="_blank" rel="noopener noreferrer">Azantx</a>, <a href="https://tiiglu.com/" target="_blank" rel="noopener noreferrer">Tiiglu</a>, <a href="https://saafy-app.vercel.app/" target="_blank" rel="noopener noreferrer">Saafy</a>, <a href="https://mysarcelle.com/" target="_blank" rel="noopener noreferrer">Sarcelle</a> - CMS and e-commerce integrations with Lighthouse 95+ scores, sub-2s loads</li>
                 </ul>
